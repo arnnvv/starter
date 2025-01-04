@@ -1,5 +1,5 @@
 import { getDB } from "@/lib/db";
-import { type Config } from "drizzle-kit";
+import type { Config } from "drizzle-kit";
 
 export default {
   schema: "./src/lib/db/schema.ts",
@@ -8,5 +8,5 @@ export default {
     url: getDB(),
   },
   tablesFilter: ["starter_"],
-  out: "./src/lib/db/drizzle",
+  out: "./drizzle",
 } satisfies Config;

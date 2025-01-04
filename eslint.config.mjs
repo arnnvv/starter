@@ -15,8 +15,6 @@ const eslintConfig = [
     rules: {
       "import/no-anonymous-default-export": "off",
       "@typescript-eslint/no-explicit-any": "off",
-      "jsx-a11y/role-supports-aria-props": "off",
-      "@typescript-eslint/no-unused-vars": "off",
     },
   },
 ];

@@ -1,9 +1,19 @@
 "use client";
 
-import { JSX, type ReactNode, useState, useTransition } from "react";
+import {
+  Children,
+  cloneElement,
+  isValidElement,
+  JSX,
+  type ReactNode,
+  useState,
+  useTransition,
+} from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { ActionResult } from "./AuthFormComponent";
+import { Spinner } from "./ui/spinner";
+import { isFormControl } from "@/lib/form-control";
 
 export const ForgotPasswordFormComponent = ({
   children,
@@ -56,14 +66,17 @@ export const ForgotPasswordFormComponent = ({
     });
   };
 
+  const disabledChildren = Children.map(children, (child) => {
+    if (isValidElement(child) && isFormControl(child)) {
+      return cloneElement(child, { disabled: isPending });
+    }
+    return child;
+  });
+
   return (
-    <form action={handleSubmit} aria-disabled={isPending}>
-      {children}
-      {isPending && (
-        <div className="absolute inset-0 flex items-center justify-center bg-white/50">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
-        </div>
-      )}
+    <form action={handleSubmit}>
+      {disabledChildren}
+      {isPending && <Spinner />}
     </form>
   );
 };
