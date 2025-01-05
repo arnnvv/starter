@@ -7,6 +7,7 @@
     "b": "next build",
     "st": "next start",
     "l": "next lint",
+    "f": "prettier --write \"**/*.{ts,tsx,js,jsx,mjs,js,md}\"",
     "ua": "pnpm dlx shadcn@latest add",
     "dg": "drizzle-kit generate --config=drizzle.config.ts",
     "dm": "drizzle-kit migrate --config=drizzle.config.ts",
