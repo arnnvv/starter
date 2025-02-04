@@ -1,5 +1,4 @@
-import { encodeBase64urlNoPadding } from "@oslojs/encoding";
-import { sha256 } from "@oslojs/crypto/sha2";
+import { encodeBase64urlNoPadding } from "./encoding";
 import {
   createOAuth2Request,
   encodeBasicCredentials,
@@ -7,6 +6,7 @@ import {
   sendTokenRevocationRequest,
 } from "./oauth-requests";
 import { OAuth2Tokens } from "./oauth-token";
+import { sha256 } from "./sha";
 
 export enum CodeChallengeMethod {
   S256 = 0,
