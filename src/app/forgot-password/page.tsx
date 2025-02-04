@@ -6,7 +6,7 @@ import { ArrowLeft } from "lucide-react";
 import { redirect } from "next/navigation";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
-import { JSX } from "react";
+import type { JSX } from "react";
 
 export default async function Page(): Promise<JSX.Element> {
   const { session } = await getCurrentSession();

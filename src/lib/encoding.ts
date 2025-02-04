@@ -75,12 +75,12 @@ const base64urlDecodeMap = {
 
 enum EncodingPadding {
   Include = 0,
-  None,
+  None = 1,
 }
 
 enum DecodingPadding {
   Required = 0,
-  Ignore,
+  Ignore = 1,
 }
 
 function encodeBase32_internal(

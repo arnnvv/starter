@@ -4,13 +4,13 @@ import {
   Children,
   cloneElement,
   isValidElement,
-  JSX,
-  ReactNode,
+  type JSX,
+  type ReactNode,
   useTransition,
 } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import { ActionResult } from "./AuthFormComponent";
+import type { ActionResult } from "./AuthFormComponent";
 import { Spinner } from "./ui/spinner";
 import { isFormControl } from "@/lib/form-control";
 

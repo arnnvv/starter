@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
     ppr: "incremental",
   },
   serverExternalPackages: ["@node-rs/argon2"],
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;

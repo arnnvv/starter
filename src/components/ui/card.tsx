@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { forwardRef, HTMLAttributes, JSX } from "react";
+import { forwardRef, type HTMLAttributes, type JSX } from "react";
 
 const Card = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref): JSX.Element => (

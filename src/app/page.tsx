@@ -1,6 +1,6 @@
 import { getCurrentSession } from "@/actions";
 import { redirect } from "next/navigation";
-import { JSX } from "react";
+import type { JSX } from "react";
 
 export default async function Home(): Promise<JSX.Element> {
   const { user, session } = await getCurrentSession();

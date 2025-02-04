@@ -2,13 +2,13 @@
 
 import { cookies } from "next/headers";
 import { cache } from "react";
-import { emailVerificationRequests, User, users } from "./lib/db/schema";
+import { emailVerificationRequests, type User, users } from "./lib/db/schema";
 import { db } from "./lib/db";
 import {
   createSession,
   generateSessionToken,
   invalidateSession,
-  SessionValidationResult,
+  type SessionValidationResult,
   validateSessionToken,
 } from "./lib/auth";
 import {
@@ -19,9 +19,9 @@ import {
 import { deleteSessionTokenCookie, setSessionTokenCookie } from "./lib/session";
 import { sendEmail } from "./lib/email-verification";
 import { and, eq } from "drizzle-orm";
-import { ActionResult } from "./components/AuthFormComponent";
+import type { ActionResult } from "./components/AuthFormComponent";
 import { utapi } from "./lib/upload";
-import { UploadFileResult } from "uploadthing/types";
+import type { UploadFileResult } from "uploadthing/types";
 import { globalGETRateLimit, globalPOSTRateLimit } from "./lib/request";
 
 export const getCurrentSession = cache(

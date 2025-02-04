@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Github } from "lucide-react";
 import { getCurrentSession, logInAction } from "@/actions";
 import { AuthFormComponent } from "@/components/AuthFormComponent";
-import { JSX } from "react";
+import type { JSX } from "react";
 import { globalGETRateLimit } from "@/lib/request";
 
 export default async function Page(): Promise<JSX.Element | undefined> {

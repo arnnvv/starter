@@ -3,10 +3,10 @@
 import {
   Children,
   cloneElement,
-  FormEvent,
+  type FormEvent,
   isValidElement,
-  JSX,
-  ReactNode,
+  type JSX,
+  type ReactNode,
   useState,
   useTransition,
 } from "react";

@@ -5,12 +5,12 @@ import {
   sendTokenRequest,
   sendTokenRevocationRequest,
 } from "./oauth-requests";
-import { OAuth2Tokens } from "./oauth-token";
+import type { OAuth2Tokens } from "./oauth-token";
 import { sha256 } from "./sha";
 
 export enum CodeChallengeMethod {
   S256 = 0,
-  Plain,
+  Plain = 1,
 }
 
 export function createS256CodeChallenge(codeVerifier: string): string {

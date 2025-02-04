@@ -4,7 +4,7 @@ import {
   Children,
   cloneElement,
   isValidElement,
-  JSX,
+  type JSX,
   type ReactNode,
   useState,
   useTransition,

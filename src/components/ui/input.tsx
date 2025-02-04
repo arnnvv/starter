@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { ComponentProps, forwardRef, JSX } from "react";
+import { type ComponentProps, forwardRef, type JSX } from "react";
 
 export const Input = forwardRef<HTMLInputElement, ComponentProps<"input">>(
   ({ className, type, ...props }, ref): JSX.Element => (

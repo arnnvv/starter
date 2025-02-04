@@ -1,5 +1,5 @@
 import { Pool } from "@neondatabase/serverless";
-import { drizzle, NeonDatabase } from "drizzle-orm/neon-serverless";
+import { drizzle, type NeonDatabase } from "drizzle-orm/neon-serverless";
 import * as schema from "./schema";
 
 export const getDB = (): string =>
