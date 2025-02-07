@@ -247,6 +247,13 @@ export const signOutAction = async (): Promise<{
 };
 
 export async function verifyOTPAction(formData: FormData) {
+  if (!globalPOSTRateLimit()) {
+    return {
+      success: false,
+      message: "Rate Limit",
+    };
+  }
+
   try {
     const { user } = await getCurrentSession();
     if (!user) return;
@@ -394,6 +401,13 @@ export async function forgotPasswordAction(
 }
 
 export async function verifyOTPForgotPassword(formData: FormData) {
+  if (!globalPOSTRateLimit()) {
+    return {
+      success: false,
+      message: "Rate Limit",
+    };
+  }
+
   try {
     const userEmail = formData.get("userEmail") as string;
     if (!userEmail) {
