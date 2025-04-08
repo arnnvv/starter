@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import type { JSX } from "react";
 
 export default async function OTPPage(): Promise<JSX.Element> {
-  if (!globalGETRateLimit()) return redirect("/not-found");
+  if (!(await globalGETRateLimit())) return redirect("/not-found");
   const { user } = await getCurrentSession();
   if (!user) return redirect("/signup");
   if (user.verified) return redirect("/");

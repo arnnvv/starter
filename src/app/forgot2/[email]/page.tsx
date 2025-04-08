@@ -9,7 +9,7 @@ export default async function Page(props: {
     email: string;
   }>;
 }): Promise<JSX.Element | undefined> {
-  if (!globalGETRateLimit()) return;
+  if (!(await globalGETRateLimit())) return;
   const params = await props.params;
   const { session } = await getCurrentSession();
   if (session !== null) return redirect("/");
