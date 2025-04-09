@@ -107,7 +107,7 @@ export function OTPInput({ userEmail }: { userEmail: string }): JSX.Element {
       <div className="flex justify-between items-center mt-4 px-2">
         <button
           type="button"
-          onClick={handleResendOTP}
+          onMouseDown={handleResendOTP}
           disabled={isResendPending || resendCooldown > 0}
           className="text-sm text-blue-600 hover:text-blue-800 transition-colors 
           disabled:text-gray-400 disabled:cursor-not-allowed"
